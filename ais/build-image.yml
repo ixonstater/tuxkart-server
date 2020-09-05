@@ -3,4 +3,4 @@ services:
   supertuxais:
     build:
       context: .
-    image: supertuxais
+    image: stkai

@@ -1,13 +1,17 @@
 #!/bin/bash
+#Change dir to app build dir
 cd /home/ixonstater/code/super-tux/ais
+
+#Build images
 docker-compose -f build-image.yml build
 cd ../server
 docker-compose -f build-image.yml build
 cd ../build
-docker save supertuxais>supertuxais.tar
-docker save supertuxserver>supertuxserver.tar
-rsync -p --progress ./supertuxserver.tar ixonstater@codefordays.io:~/supertux
-rsync -p --progress ./supertuxais.tar ixonstater@codefordays.io:~/supertux
+
+#Save images to docker hub
+docker push ixonstater/stkai:latest
+docker push ixonstater/stkserver:latest
+
+#Move docker-compose and configs to server
 rsync -p --progress ../server_config.xml ixonstater@codefordays.io:~/supertux
 rsync -p --progress ../docker-compose.yml ixonstater@codefordays.io:~/supertux
-rsync -p --progress ./load.sh ixonstater@codefordays.io:~/supertux

@@ -3,4 +3,4 @@ services:
   supertuxserver:
     build:
       context: .
-    image: supertuxserver
+    image: stkserver

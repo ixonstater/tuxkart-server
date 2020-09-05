@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   supertuxserver:
-    image: supertuxserver
+    image: ixonstater/stkserver
     ports:
       - 2757:2757/udp
       - 2759:2759/udp
@@ -12,6 +12,6 @@ services:
       - PASSWORD=virus1171995
 
   supertuxais:
-    image: supertuxais
+    image: ixonstater/stkai
     depends_on:
       - supertuxserver

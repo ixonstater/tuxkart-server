@@ -1,0 +1,6 @@
+version: "3.3"
+services:
+  supertuxais:
+    build:
+      context: .
+    image: supertuxais

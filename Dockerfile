@@ -48,8 +48,8 @@ COPY --from=build /usr/local/bin/supertuxkart /usr/local/bin
 COPY --from=build /usr/local/share/supertuxkart /usr/local/share/supertuxkart
 
 # Expose ports
-EXPOSE 2757
-EXPOSE 2759
+EXPOSE 2757/udp
+EXPOSE 2759/udp
 
 # On container startup log in with username and password if given and start the server
 CMD if [ -n ${USERNAME} -a -n ${PASSWORD} ]; then \

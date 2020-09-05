@@ -48,4 +48,4 @@ COPY --from=build /usr/local/bin/supertuxkart /usr/local/bin
 COPY --from=build /usr/local/share/supertuxkart /usr/local/share/supertuxkart
 
 # On container startup log in with username and password if given and start the server
-CMD supertuxkart --connect-now=supertuxserver:2759 --network-ai=8
+CMD supertuxkart --connect-now=supertuxserver:2759 --password=${SERVER_PASSWORD} --network-ai=8

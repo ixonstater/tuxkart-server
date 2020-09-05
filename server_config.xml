@@ -29,7 +29,7 @@
     <server-max-players value="8" />
 
     <!-- Password for private server, leave empty for a public server. -->
-    <private-server-password value="" />
+    <private-server-password value="39933" />
 
     <!-- Message of today shown in lobby, you can enter encoded XML words here or a file.txt and let STK load it. -->
     <motd value="" />

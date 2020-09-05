@@ -19,3 +19,5 @@ services:
     image: stkai
     depends_on:
       - supertuxserver
+    environment:
+      - SERVER_PASSWORD=39933

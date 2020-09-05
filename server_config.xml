@@ -29,7 +29,7 @@
     <server-max-players value="8" />
 
     <!-- Password for private server, leave empty for a public server. -->
-    <private-server-password value="" />
+    <private-server-password value="connection" />
 
     <!-- Message of today shown in lobby, you can enter encoded XML words here or a file.txt and let STK load it. -->
     <motd value="" />
@@ -161,6 +161,6 @@
     <ipv6-geolocation-table value="ipv6_mapping" />
 
     <!-- If true this server will auto add / remove AI connected with network-ai=x, which will kick N - 1 bot(s) where N is the number of human players. Only use this for non-GP racing server. -->
-    <ai-handling value="false" />
+    <ai-handling value="true" />
 
 </server-config>

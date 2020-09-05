@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  supertux:
+    image: supertuxserver
+    ports:
+      - 2757:2757/udp
+      - 2759:2759/udp
+    volumes:
+      - ./server_config.xml:/stk/server_config.xml
+    environment:
+      - USERNAME=ixonstater
+      - PASSWORD=virus1171995

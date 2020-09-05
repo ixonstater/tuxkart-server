@@ -6,8 +6,6 @@ FROM ubuntu:18.04 AS build
 LABEL maintainer=jwestp
 WORKDIR /stk
 
-# Set stk version that should be built
-ENV VERSION=1.1
 
 # Install build dependencies
 RUN apt-get update && \
@@ -22,8 +20,8 @@ RUN apt-get update && \
                        zlib1g-dev
 
 # Get code and assets
-RUN git clone --branch ${VERSION} --depth=1 https://github.com/supertuxkart/stk-code.git
-RUN svn checkout https://svn.code.sf.net/p/supertuxkart/code/stk-assets-release/${VERSION}/ stk-assets
+RUN git clone --branch 1.2 --depth=1 https://github.com/supertuxkart/stk-code.git
+RUN svn checkout https://svn.code.sf.net/p/supertuxkart/code/stk-assets-release/1.1/ stk-assets
 
 # Build server
 RUN mkdir stk-code/cmake_build && \

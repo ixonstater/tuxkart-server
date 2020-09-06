@@ -15,3 +15,5 @@ services:
     image: ixonstater/stkai:latest
     depends_on:
       - supertuxserver
+    environment:
+      - NUM_AIS=${NUM_AIS}

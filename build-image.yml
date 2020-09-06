@@ -3,9 +3,9 @@ services:
   supertuxais:
     build:
       context: ./ais
-    image: stkai
+    image: ixonstater/stkai
   
-  supertuxais:
+  supertuxserver:
     build:
       context: ./server
-    image: stkserver
+    image: ixonstater/stkserver

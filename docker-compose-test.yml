@@ -20,4 +20,4 @@ services:
     depends_on:
       - supertuxserver
     environment:
-      - SERVER_PASSWORD=39933
+      - NUM_AIS=${NUM_AIS}

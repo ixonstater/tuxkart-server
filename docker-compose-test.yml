@@ -10,8 +10,8 @@ services:
     volumes:
       - ./server_config.xml:/stk/server_config.xml
     environment:
-      - USERNAME=ixonstater
-      - PASSWORD=virus1171995
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
 
   supertuxais:
     build:

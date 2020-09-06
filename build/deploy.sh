@@ -10,5 +10,5 @@ docker push ixonstater/stkai:latest
 docker push ixonstater/stkserver:latest
 
 #Move docker-compose and configs to server
-rsync -p --progress ../server_config.xml ixonstater@codefordays.io:~/supertux
-rsync -p --progress ../docker-compose.yml ixonstater@codefordays.io:~/supertux
+rsync -p --progress server_config.xml ixonstater@codefordays.io:~/supertux
+rsync -p --progress docker-compose.yml ixonstater@codefordays.io:~/supertux
